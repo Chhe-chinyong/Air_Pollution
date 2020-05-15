@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js -e js,hbs"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "handlebars": "^4.7.6",
+    "hbs": "^4.1.1",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.3",
     "request": "^2.88.2"
