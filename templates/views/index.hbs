@@ -11,7 +11,20 @@
 <body>
     
         {{>header}}
-        <p>{{object.time}}</p>
+        <div class="container">
+            <h6 class="title">Explore the air quality anywhere in the world</h6>
+            <p>{{object.time}}</p>
+            <div class="form">
+                <form action="/action_page.php">
+                <input id="search" type="text" placeholder="Your location, country, city">
+                <button type="submit"></button>
+            </form>
+            </div>
+            
+        </div>
+        
+        {{>footer}}
+        
     
 </body>
 </html>
