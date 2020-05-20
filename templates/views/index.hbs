@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" href="public/css/style.css">
     <link rel="icon" type="image/png" href="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_46-512.png">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Home</title>
 
 </head>
@@ -14,14 +15,24 @@
         <div class="container">
             <h6 class="title">Explore the air quality anywhere in the world</h6>
             <p>{{object.time}}</p>
-            <div class="form">
-                <form action="/action_page.php">
-                <input id="search" type="text" placeholder="Your location, country, city">
-                <button type="submit"></button>
-            </form>
-            </div>
-            
         </div>
+            <div class="form-style">
+                <div class="container">
+                    <div class="form">
+                        <form action="/action_page.php">
+                            <div class="wrap">
+                                <div class="search">
+                                    <input type="text" class="searchTerm" placeholder="Your location, country, city">
+                                    <button type="submit" class="searchButton">
+                                        <img src="https://image.flaticon.com/icons/png/512/482/482631.png" alt="search-button" class="img-form">
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
         
         {{>footer}}
         
