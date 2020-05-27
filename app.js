@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 const Logger = require("@ptkdev/logger");
 const options = require("./object");
 const bodyParser = require("body-parser");
@@ -15,11 +16,13 @@ const partialPath = path.join(__dirname, "/templates/partials");
 
 
 //Set-up handlebar engine 
+app.use(cors());
 app.set('view engine', 'hbs');
 app.set('views', templatePath);
 app.use(express.static(publicPath));
 hbs.registerPartials(partialPath);
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 //config
 dotenv.config();
