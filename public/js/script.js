@@ -11,17 +11,16 @@ const condition = document.querySelector("#var-condition");
 const air = document.querySelector('#var-air');
 
 
-
 fetch('http://localhost:3000/weather').then((response) => {
     response.json()
         .then((data) => {
             console.log(data);
             air.textContent = data.air;
             location1.textContent = data.city + ", " + data.country;
-            temp.textContent = data.temp;
-            humid.textContent = data.humid;
-            wind.textContent = data.wind;
-            tempImg.src = '/image/'+data.ic+'png';
+            temp.textContent = data.temp+ '°';
+            humid.textContent = data.humid+"%";
+            wind.textContent = data.wind+"m/s";
+            tempImg.src = '/image/'+data.ic+'.png';
             if (data.air <= 50)
             {   
                 img.src= '/image/pollute/ic-face-green.svg';

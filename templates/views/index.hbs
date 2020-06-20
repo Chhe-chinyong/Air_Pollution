@@ -32,44 +32,99 @@
                         </form>
                     </div>
                 </div>
+            
 
                 <div class="row" id="middle">
                     <div class="col-md-6 pr-0">
-                        <div class="pic">
+                        <div class="all">
                             <div class="head">
-                                <div class="location">
-                                    <p id="var-location"></p>
-                                    <hr class="line">
-                                </div>
+                                <p id="var-location"></p>
+                                <hr class="line-head">
                             </div>
 
-                            <div class="center">
+                            <div class="center-color">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img id="var-img"> 
+                                    </div>
+                                    <div class="col-sm-1 pr-0">
+                                        <div class="verticalLine">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="div-air">
+                                            <p id='var-air'></p>
+                                            <p id ='var-air1'>US AQI</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="div-air">
+                                            <p id= 'var-condition'></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                 <img id='tempImg'>
+                                 <p id= 'temp'></p>
+                            </div>
+
+                            <div class="col-sm-3 pl-0 pr-0 a">
+                                <img src="image/web-img/humid.svg" id="img-humid">
+                                <p id= 'humid'></p>
+                            </div>
+
+                            <div class="col-sm-4 pr-0 ">
+                                <img src="image/web-img/snowing.svg" id="img-wind">
+                                <p id= 'wind'></p> 
+                            </div>
+
+                        </div>  
+                                 
+                           
+                        </div>
+                    </div>
+
+                     <div class="col-md-6">
+                        <div class="para">
+                            Current time Air pollution and forecasts
+                        </div>    
+                    </div>
+                </div>
+            </div>
+                      
+                    
+
+                   
+           
+{{!-- 
+                        <div class="center">
                                 <img id="var-img"> 
                                 <div class="div-air">
                                     <p id='var-air'></p>
+                                    
                                     <p id ='var-air1'>US AQI</p>
                                 </div>
-                                <p id= "var-condition"></p>
-                                <div class="line-center"></div>
+                                <div class="div-air">
+                                    <p id= "var-condition"></p>
+                                </div>
+                                
+                                 <div class="line-center"></div>
                                 <img id='tempImg'>
                                 <p id= 'temp'></p>
                                 <p id= 'humid'></p>
                                 <p id= 'wind'></p>
-                            </div>
+                        </div>
                                 
-                        </div>
+                        </div> 
                        
-                    </div>
+                    </div> --}}
 
-                    <div class="col-md-6">
-                        <div class="para">
-                            Current time Air pollution and forecasts
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        <section class = "about">
+              
+        <section class = "about" id="about-link">
             <div class="row">
                 <div class="col-sm-6" >
                     <h1 class= "dev-title">The world need to change</h1> 
@@ -89,8 +144,10 @@
         </section>
         
         
+        <div id="contact-link">
+            {{>footer}}
+        </div>
         
-        {{>footer}}
         
         <script src="/js/script.js"></script>
 </body>
