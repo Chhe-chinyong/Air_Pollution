@@ -9,7 +9,7 @@ const wind = document.querySelector('#wind');
 const tempImg = document.querySelector('#tempImg');
 const condition = document.querySelector("#var-condition");
 const air = document.querySelector('#var-air');
-
+const color = document.querySelector('#center-color');
 
 fetch('http://localhost:3000/weather').then((response) => {
     response.json()
@@ -25,12 +25,14 @@ fetch('http://localhost:3000/weather').then((response) => {
             {   
                 img.src= '/image/pollute/ic-face-green.svg';
                 condition.textContent = "Good";
+                color.style.background = '#a8e05f';
             }
 
             if (data.air > 50 && data.air <= 100)
             {
                 img.src= '/image/pollute/ic-face-yellow.svg';
                 condition.textContent = "Moderate";
+                color.style.background = '#FDD74B';
 
             }
 
@@ -38,13 +40,14 @@ fetch('http://localhost:3000/weather').then((response) => {
             {
                 img.src= '/image/pollute/ic-face-orange.svg';
                 condition.textContent = "Unhealthy for sensitive groups";
-
+                color.style.background = '#f27e2f';
             }
 
             if (data.air > 150 && data.air <= 200)
             {
                 img.src= '/image/pollute/ic-face-red.svg';
                 condition.textContent = "Unhealthy";
+                color.style.background = '#e84b50';
 
             }
 
