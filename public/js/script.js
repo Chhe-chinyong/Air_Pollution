@@ -21,6 +21,7 @@ fetch('http://localhost:3000/weather').then((response) => {
             humid.textContent = data.humid+"%";
             wind.textContent = data.wind+"m/s";
             tempImg.src = '/image/'+data.ic+'.png';
+            console.log('/image/'+data.ic+'.png');
             if (data.air <= 50)
             {   
                 img.src= '/image/pollute/ic-face-green.svg';
